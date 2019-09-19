@@ -1,0 +1,16 @@
+<div>
+<h1>SIGNUP  HERE</h1>
+<form [formGroup]="signuppageForm">
+ NAME:
+<input type="text" formControlName="name"required><br/><br>
+Mobile number:
+<input type="text" formControlName="mobilenumber"required><br/><br>
+E-mail:
+<input type="email"  formControlName="email"required><br/><br>
+PASSWORD:
+<input type="password" formControlName="password" required><br/><br>
+<button  (click)="register(signuppageForm.value)">REGISTER</button><br>
+<p>Already have an account?
+     <button  (click)="reg()">LOGIN HERE</button></p>
+</form>
+</div>

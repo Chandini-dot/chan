@@ -1,0 +1,34 @@
+<!-- <div>
+        <button  type="button"  (click)="login()">LOGIN</button>
+    <h1>NEWS LIST</h1>
+    <button (click)="news()">News list</button>
+    <!-- <table>
+        <tr> 
+            <th>NEWS NAME</th>
+        </tr>
+</table> -->
+<!-- <div>
+<div>
+    <h1>NEWS DETAILS</h1>
+    <button (click)="newsdetails()">News details</button>
+
+</div>  -->
+<h1>To Day Newspaper</h1>
+<button  type="button"  (click)="login()">LOGIN</button>
+<div *ngFor="let data of totalData" (click)="tonextPage(data)" id="a">
+    <img id="b" src="{{data.profile_image}}">
+    <h3 (click)="add(description)">{{data.alias}}<p>{{data.data1}}</p>
+    </h3>
+    <p>{{data.shortDescription}}</p>
+    <p>{{data.reportedBy}}:{{data.reportedDate}}</p>
+    <br>
+</div>
+
+​
+<div id="a">
+        <img src="{{apidata.profile_image}}">
+        <h3 (click)="add(description)">{{apidata.alias}}<p
+            >{{apidata.data1}}</p></h3>
+        <p>{{apidata.shortDescription}}</p>
+        <p>{{apidata.reportedBy}}:{{apidata.reportedDate}}</p>   
+</div>

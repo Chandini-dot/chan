@@ -1,0 +1,40 @@
+<form #locForm="ngForm" (ngSubmit)="create(locForm.value)">
+    <div>
+        <label>ID</label>
+        <input #locRef="ngModel" ngModel name="name" [(ngModel)]="val.name">
+    </div>
+    <div>
+        <label >Title</label>
+        <input #locRef2="ngModel"  ngModel name="title" [(ngModel)]="val.title">
+    </div>
+​
+    <div>
+            <label>author</label>
+            <input #locRef3="ngModel"  ngModel name="author" [(ngModel)]="val.author" >
+        </div>    <br>
+    <button>Submit</button>
+</form>
+​
+<br>
+<table>
+    <thead>
+        <tr>
+            <td>ID</td>
+            <td>Title</td>
+            <td>Author</td>
+            <td>right</td>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let val of value">
+            <td><input type="text" [(ngModel)]="val.name"> </td>
+            <td><input type="text" [(ngModel)]="val.title"></td>
+            <td><input type="text" [(ngModel)]="val.author"></td>
+            <td (click)="deleteddd(val.name)"> delete</td>
+            <td (click)="update(val)">update</td>
+​
+        </tr>
+    </tbody>
+</table>
+​
