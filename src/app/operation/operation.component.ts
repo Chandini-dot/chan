@@ -15,7 +15,6 @@ export class OperationComponent implements OnInit {
   public id
 public name
 public lname
-
   constructor(private http:HttpClient) { 
     this.operation = new FormGroup({
       id: new FormControl(),
@@ -24,8 +23,7 @@ public lname
    });
   
   }
-
-  ngOnInit() {
+    ngOnInit() {
   }
 add(a){
   let data={
@@ -37,8 +35,6 @@ this.http.post("http://localhost:3000/posts",data).subscribe(data=>{
 console.log(data)
 })
 }
-
-
 view(){
   this.http.get("http://localhost:3000/posts").subscribe(data2=>
   {
@@ -46,17 +42,13 @@ view(){
     this.data1=data2
   })
 }
-
-
 remove(){
-  this.http.delete("http://localhost:3000/posts"+"/"+this.removeid).subscribe(data=>
+  this.http.delete("http://localhost:3000/posts"+"/"+this.removeid).subscribe(data3=>
   {
     console.log("successfully deleted")
     this.view();
   })
 }
-
-
 update(v){
   this.crud=v
  console.log(this.crud)
@@ -65,6 +57,4 @@ update(v){
  this.lname=this.crud.author;
  console.log(this.id)
  }
-
 }
-
