@@ -7,10 +7,11 @@
     <th>Title</th>
     <th>Completed</th>
     </tr>
-    <tr *ngFor="let b of total|filter:search">
+    <tr *ngFor="let b of total">
         <td>{{b.userId}}</td>
         <td>{{b.id}}</td>
         <td>{{b.title}}</td>
         <td>{{b.completed}}</td>
     </tr>
 </table>
+<!-- |filter:search -->
